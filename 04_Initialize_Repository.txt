@@ -1,0 +1,4 @@
+To make a repository you need init or clone command
+To initialize a repository
+git init    // to initialize repository ( to make git repository)
+ls -lart    // to show hidden folders

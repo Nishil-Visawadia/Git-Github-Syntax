@@ -1,0 +1,5 @@
+To add the files to the git
+git add filename
+git add -A      // to add all the files of the working directory to git
+eg:- git add 01_Introduction.txt
+git status      // to get the status

@@ -1,0 +1,19 @@
+Open Git Bash
+
+Setup Git
+git config --global user.name "YourName"
+git config --global user.email "YourEMail@something.com"
+
+Example:
+git config --global user.name Abc
+git config --global user.email abc@something.com
+
+To check the Setup
+git config --global user.name
+git config --global user.email
+
+
+//Some Shortcuts
+clear       // to clear terminal
+press ctrl + to zoom in
+press ctrl - to zoom out

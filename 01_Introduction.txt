@@ -1,0 +1,5 @@
+What is Git ?
+Git is free and open source software for Distributed Version Control: tracking changes in any set of files,
+usually used for coordinating work among programmers collaboratively developing source code during software development.
+
+Git simply saves the changes while multiple people working on a single project !

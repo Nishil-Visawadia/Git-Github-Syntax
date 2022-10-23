@@ -1,0 +1,14 @@
+To get status of git
+git status      // to get status of file
+(use this command regularly while using the git)
+
+Refer the image
+Types of git status (Untracked -> Staged -> Unmodified -> Modified)
+Untracked       // Meaning - Not tracking the file using git (add of file takes place and files go to staged area)
+Unmodified      // the files are commited and can be edited and removed in this stage
+Modified        // Modified files are here and are staged
+Staged          // Files are commited
+
+git status -s                   // to get summary of files current status
+(red denotes files in working tree, green denotes files in staging area)
+(M denotes Modified)

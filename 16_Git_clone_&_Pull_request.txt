@@ -1,0 +1,10 @@
+pull request - a request sent by a person to the repository owner with the intent to change or improve the code
+
+git clone URL foldername        // URL is the url of the repository you want to clone & foldername is the name of the folder in which you want to keep the files
+(if folder name not given it will be cloned with the name of the git repository)
+
+Example:
+cd Desktop
+mkdir google
+git clone https://github.com/google/material-design-icons.git google
+(the repository will be cloned in to the folder name "google")

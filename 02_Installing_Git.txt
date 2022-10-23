@@ -1,0 +1,6 @@
+Type git scm on your browser
+
+https://git-scm.com
+
+Link to download Git - https://git-scm.com/download/win for windows
+Accept the defaults and install.

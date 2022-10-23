@@ -1,0 +1,3 @@
+To see the changes in the files after the commit
+git diff                 // compare working tree files with staging area
+git diff --staged        // compares staging area to last commit

@@ -1,0 +1,8 @@
+Git ignore used to ignore the files that are not much valuable in the project
+touch .gitignore        // to make a git ignore file
+
+inside the .gitignore write the name of the files you want to ignore
+filename.txt            // any file naming filename.txt will be ignored in the project
+/filename.txt           // file inside the same folder of .gitignore will be ignore
+*.txt                   // ignores all the text files in the project
+foldername/             // to ignore a folder

@@ -1,0 +1,25 @@
+Remote Repository
+A repository is made on Github and you want to connect on your system
+git remote add origin "URL of the repository"       // add a remote with name origin
+git remote                                          // displays the list of remote
+git remote -v                                       // displays url of fetch and push
+git push origin master                              // push the master branch to the origin (remote repo / url)
+(if the repository is private it will display an error)
+
+Provide your GitHub username and password
+        Create Token Access
+            Go to github Settings > Developer Settings > Personal access Tokens> Tokens > Generate new token(Classic)
+            Add Note(Name of access token)
+            Select scopes (tick repo)
+            Generate token
+        
+        Add username and Acess token
+
+(if you want to add feature branch to the github)
+git checkout feature
+git push origin feature                             // push the feature branch to the origin (remote repo / url)
+
+git checkout master
+git push -u origin master
+(after doing this, just the git push command is enough to push the repository instead of doing git push origin master all the time)
+git push    // will automatically push to the master branch

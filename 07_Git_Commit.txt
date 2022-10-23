@@ -1,0 +1,12 @@
+To commit the file (commit statement should be such that it should be informative and value addition to what you commited in the existing/new code)
+git commit
+after this an editor will open, write "Initial commit" on the 1st line and press ESC :wq to escape vim
+Note: Initial commit is a comment
+
+git status      // To check the files in working directory are placed in the git
+(git will display "nothing to commit, working tree clean" if all the files are commited)
+(even after a commit if a file is edited it will display in git status as "modified" and can be added using git add -A and then commited)
+
+git commit -m "Added modified files"        // use this command as it doesn't open any editor and the files are directly commited
+
+git commit -a -m "Skipped staging area and fixed"       // to add and commit the files at same time

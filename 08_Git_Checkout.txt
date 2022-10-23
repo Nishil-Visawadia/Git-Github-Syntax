@@ -1,0 +1,5 @@
+How to recover a file from git of working directory if somebody modified the file
+git status      // will display the modified file name
+git checkout filename   // will restore the commited file contents and modified file contents will be removed
+git checkout -f         // for all files
+git status

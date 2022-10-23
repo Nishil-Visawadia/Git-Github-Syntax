@@ -1,0 +1,168 @@
+What is Git ?
+Git is free and open source software for Distributed Version Control: tracking changes in any set of files,
+usually used for coordinating work among programmers collaboratively developing source code during software development.
+
+Git simply saves the changes while multiple people working on a single project !
+
+Link to download Git - https://git-scm.com/download/win
+Accept the defaults and install.
+
+Open Git Bash
+
+
+Setup Git
+git config --global user.name "YourName"
+git config --global user.email "YourEMail@something.com"
+
+To check the Setup
+git config --global user.name
+git config --global user.email
+
+
+To make a repository you need init or clone command
+To initialize a repository
+git init    // to initialize repository ( to make git repository)
+ls -lart    // to show hidden folders
+
+
+To get status of git
+git status      // to get status of file
+(use this command regularly while using the git)
+
+Refer the image
+Types of git status (Untracked -> Staged -> Unmodified -> Modified)
+Untracked       // Meaning - Not tracking the file using git (add of file takes place and files go to staged area)
+Unmodified      // the files are commited and can be edited and removed in this stage
+Modified        // Modified files are here and are staged
+Staged          // Files are commited
+
+
+To add the files to the git
+git add filename
+git add -A      // to add all the files of the working directory to git
+eg:- git add 01_Introduction.txt
+git status      // to get the status
+
+
+To commit the file (commit statement should be such that it should be informative and value addition to what you commited in the existing/new code)
+git commit
+after this an editor will open, write "Initial commit" on the 1st line and press ESC :wq to escape vim
+Note: Initial commit is a comment
+
+git status      // To check the files in working directory are placed in the git
+(git will display "nothing to commit, working tree clean" if all the files are commited)
+(even after a commit if a file is edited it will display in git status as "modified" and can be added using git add -A and then commited)
+
+git commit -m "Added modified files"        // use this command as it doesn't open any editor and the files are directly commited
+
+//Some Shortcuts
+clear       // to clear terminal
+press ctrl + to zoom in
+press ctrl - to zoom out
+
+
+How to recover a file from git of working directory if somebody modified the file
+git status      // will display the modified file name
+git checkout filename   // will restore the commited file contents and modified file contents will be removed
+git checkout -f         // for all files
+git status
+
+
+How to get log
+git log         // get the commit number, Name of author, EMail of author, Date & Time and comment
+(Useful when many people working on a project)
+
+git log -p -1   // 1 is the number of commits you want to see
+
+
+To see the changes in the files after the commit
+git diff                 // compare working tree files with staging area
+git diff --staged        // compares staging area to last commit
+
+
+git commit -a -m "Skipped staging area and fixed"       // to add and commit the files at same time
+
+
+To removed unwanted files
+git rm filename                 // deletes the unwanted file from staging area as well as from git and harddisk
+git rm --cached filename        // deletes files only from staging area
+
+git status -s                   // to get summary of files current status
+(red denotes files in working tree, green denotes files in staging area)
+(M denotes Modified)
+
+
+Git ignore used to ignore the files that are not much valuable in the project
+touch .gitignore        // to make a git ignore file
+
+inside the .gitignore write the name of the files you want to ignore
+filename.txt            // any file naming filename.txt will be ignored in the project
+/filename.txt           // file inside the same folder of .gitignore will be ignore
+*.txt                   // ignores all the text files in the project
+foldername/             // to ignore a folder
+
+
+Branches (Best feature of git)
+Branch creates a differnt copy of the master branch, so while the master branch is in production it won't cause any harm to the existing code.
+Master in the default branch
+
+git branch feature      // creates a branch naming feature
+git branch              // shows the branches (green denotes the branch in which you are particularly)
+git checkout master     // switched to master branch
+git checkout feature    // switched to the feature branch
+git status              // displays the status of the branch
+
+If feature branch of the project is better and you want to merge with master branch
+git branch              // shows the branches (green denotes the branch in which you are particularly)
+git checkout master     // use this to switch to master branch
+git log -p -2           // to check the commit logs
+git merge feature       // feature branch is merged with master branch
+
+git checkout -b newbranch   // to create and switch to the "newbranch" in single line command
+git branch                  // will display you are in the "newbranch"
+
+
+Github
+What is Github?
+Hosting service for git repositories. (bitbucket & gitlab are alternatives)
+Github website: https://github.com/
+
+
+Remote Repository
+A repository is made on Github and you want to connect on your system
+git remote add origin "URL of the repository"       // add a remote with name origin
+git remote                                          // displays the list of remote
+git remote -v                                       // displays url of fetch and push
+git push origin master                              // push the master branch to the origin (remote repo / url)
+(if the repository is private it will display an error)
+
+Provide your GitHub username and password
+        Create Token Access
+            Go to github Settings > Developer Settings > Personal access Tokens> Tokens > Generate new token(Classic)
+            Add Note(Name of access token)
+            Select scopes (tick repo)
+            Generate token
+        
+        Add username and Acess token
+
+(if you want to add feature branch to the github)
+git checkout feature
+git push origin feature                             // push the feature branch to the origin (remote repo / url)
+
+git checkout master
+git push -u origin master
+(after doing this, just the git push command is enough to push the repository instead of doing git push origin master all the time)
+git push    // will automatically push to the master branch
+
+pull request - a request sent by a person to the repository owner with the intent to change or improve the code
+
+git clone URL foldername        // URL is the url of the repository you want to clone & foldername is the name of the folder in which you want to keep the files
+(if folder name not given it will be cloned with the name of the git repository)
+
+Example:
+cd Desktop
+mkdir google
+git clone https://github.com/google/material-design-icons.git google
+(the repository will be cloned in to the folder name "google")
+
+You can try Github Desktop

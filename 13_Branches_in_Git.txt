@@ -1,0 +1,18 @@
+Branches (Best feature of git)
+Branch creates a differnt copy of the master branch, so while the master branch is in production it won't cause any harm to the existing code.
+Master in the default branch
+
+git branch feature      // creates a branch naming feature
+git branch              // shows the branches (green denotes the branch in which you are particularly)
+git checkout master     // switched to master branch
+git checkout feature    // switched to the feature branch
+git status              // displays the status of the branch
+
+If feature branch of the project is better and you want to merge with master branch
+git branch              // shows the branches (green denotes the branch in which you are particularly)
+git checkout master     // use this to switch to master branch
+git log -p -2           // to check the commit logs
+git merge feature       // feature branch is merged with master branch
+
+git checkout -b newbranch   // to create and switch to the "newbranch" in single line command
+git branch                  // will display you are in the "newbranch"

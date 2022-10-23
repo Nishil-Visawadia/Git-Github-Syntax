@@ -1,0 +1,7 @@
+To removed unwanted files
+git rm filename                 // deletes the unwanted file from staging area as well as from git and harddisk
+git rm --cached filename        // deletes files only from staging area
+
+git status -s                   // to get summary of files current status
+(red denotes files in working tree, green denotes files in staging area)
+(M denotes Modified)

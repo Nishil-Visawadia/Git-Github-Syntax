@@ -1,0 +1,54 @@
+Installation
+    sudo apt install git
+    git --version           #to check verison
+
+Configuration
+    git config --global user.name "YOUR_USERNAME"         #add username
+    git config --global user.email "YOUR@EMAIL”           #add email
+    git config --list                                     #verify configuration
+
+    Create Repository on GitHub account
+
+    Using Git with Local and Remote Repositories
+        mkdir foldername
+        cd foldername
+        git init            #initiates git in that folder
+
+    Connect remote GitHub repository to the local system
+        git remote add origin https://github.com/YOUR_GIT_REPO.git       #paste the link to your repo that you made
+
+Test File
+    Create a file in the folder that you made
+        vim Hello.java
+    
+    Add code to the file
+        package test;
+        public class Hello {
+            public static void main(String[] args) {
+                System.out.println("hello");
+            }
+        }
+    
+Using Git
+    Adds change in the working directory
+        git add Hello.java
+    
+    Commit changes
+        git commit -m "Add Hello.java"
+    
+    Push changes
+        git push origin master
+
+    Provide your GitHub username and password
+        Create Token Access
+            Go to github Settings > Developer Settings > Personal access Tokens> Tokens > Generate new token(Classic)
+            Add Note(Name of access token)
+            Select scopes (tick repo)
+            Generate token
+        
+        Add username and Acess token
+
+Cloning a Repository
+    Make folder
+        mkdir foldername
+        git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git

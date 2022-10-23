@@ -1,0 +1,5 @@
+How to get log
+git log         // get the commit number, Name of author, EMail of author, Date & Time and comment
+(Useful when many people working on a project)
+
+git log -p -1   // 1 is the number of commits you want to see
